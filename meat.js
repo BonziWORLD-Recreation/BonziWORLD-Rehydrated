@@ -156,19 +156,20 @@ let userCommands = {
     "pawn": "passthrough",
     "bees": "passthrough",
 "color": function(color) {
-    if (typeof color != "undefined") {
-        // Allow URLs in addition to preset colors
-        if (settings.bonziColors.indexOf(color) !== -1 || 
-            color.startsWith('http') || 
-            color.startsWith('data:')) {
+        if (typeof color != "undefined") {
+            if (settings.bonziColors.indexOf(color) == -1)
+                return;
+            
             this.public.color = color;
+        } else {
+            let bc = settings.bonziColors;
+            this.public.color = bc[
+                Math.floor(Math.random() * bc.length)
+            ];
         }
-    } else {
-        let bc = settings.bonziColors;
-        this.public.color = bc[Math.floor(Math.random() * bc.length)];
-    }
-    this.room.updateUser(this);
-},
+
+        this.room.updateUser(this);
+    },
     "pope": function() {
         this.public.color = "pope";
         this.room.updateUser(this);

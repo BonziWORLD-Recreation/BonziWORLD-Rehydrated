@@ -170,6 +170,21 @@ let userCommands = {
 
         this.room.updateUser(this);
     },
+    "agent": function(agent) {
+        if (typeof agent != "undefined") {
+            if (settings.agents.indexOf(agent) == -1)
+                return;
+            
+            this.public.agent = agent;
+        } else {
+            let bc = settings.agents;
+            this.public.agent = bc[
+                Math.floor(Math.random() * bc.length)
+            ];
+        }
+
+        this.room.updateUser(this);
+    },
     "pope": function() {
         this.public.color = "pope";
         this.room.updateUser(this);
@@ -252,6 +267,9 @@ class User {
         this.public = {
             color: settings.bonziColors[Math.floor(
                 Math.random() * settings.bonziColors.length
+            )],
+	    agent: settings.agents[Math.floor(
+                Math.random() * settings.agents.length
             )]
         };
 

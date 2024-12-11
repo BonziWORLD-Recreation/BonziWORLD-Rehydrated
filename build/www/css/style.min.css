@@ -249,7 +249,7 @@
     left: 0;
     width: 100%;
     height: 30px;
-    background-image: url("../img/desktop/taskbar.png");
+    background-image: url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/themes/themedir/luna/blue/taskbarbackground.bmp");
     background-size: 100% 100%;
     z-index: 999; }
 
@@ -258,7 +258,7 @@
 
   #chat_send {
     width: 100px;
-    background-image: url("../img/desktop/start.png");
+    background-image: url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/themes/themedir/luna/blue/startbutton.bmp");
     background-size: 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -294,8 +294,8 @@
     -webkit-user-select: text; }
 
   #page_login {
-    background-color: #8b5adc;
-    background-image: url("../img/logon/logo.png"), url("../img/logon/top.png"), url("../img/logon/bottom.png"), url("../img/logon/topleft.png"), url("../img/logon/divider.png");
+    background-color: #245DDA;
+    background-image: url("../img/logon/logo.png"), url("../img/logon/top.png"), url("../img/logon/bottom.png"), url("../img/logon/topleft.png"), url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/ext/logondui/vdivider.bmp");
     background-position: center, top, bottom, top left, center;
     background-size: auto, 100% 100px, 100% 122px, auto, 1px 100%;
     background-repeat: no-repeat; }
@@ -357,13 +357,13 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background-image: url("../img/logon/go.png");
+    background-image: url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/ext/logondui/go.bmp");
     background-size: 100%;
     background-repeat: no-repeat; }
     #login_go:hover {
-      background-position: 0 -20px; }
+      background-image: url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/ext/logondui/go.bmp"); }
     #login_go:active {
-      background-position: 0 -40px; }
+      background-image: url("https://raw.githubusercontent.com/tongzx/nt5src/refs/heads/master/Source/XPSP1/NT/shell/ext/logondui/gokf.bmp"); }
 
   #login_load {
     color: #fff;

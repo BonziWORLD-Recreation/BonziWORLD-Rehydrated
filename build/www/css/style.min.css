@@ -234,11 +234,14 @@
     body.vaporwave #chat_send:active {
       background-position: 0 -56px; }
 
-  #content {
+    #content {
     background-color: #6d33a0;
-    background-image: url("../img/desktop/logo.png"), url("../img/desktop/bg.png");
+    background-image: url("../img/desktop/logo.png"), url("https://static.wikitide.net/windowswallpaperwiki/c/cf/Bliss.jpg");
     background-position: top left, center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    }
+
 
   #chat_bar {
     position: absolute;

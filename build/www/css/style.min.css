@@ -573,3 +573,26 @@
 
   .context-menu-accesskey {
     text-decoration: underline; }
+
+.chat-log-icon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#chatLogWindow {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 400px;
+  height: 300px;
+  z-index: 999;
+}
+
+#chatLogContent {
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}

@@ -40,6 +40,25 @@
                     You are the owner of this room.
                 </span>
             </div>
+
+<div class="chat-log-icon" onclick="toggleChatLog()">
+  <img src="https://bonziworld.org/img/assets/log_button.webp" alt="Chat Log" width="32" height="32">
+</div>            
+
+<div class="window" id="chatLogWindow" style="display:none">
+  <div class="title-bar">
+    <div class="title-bar-text">Chat Log</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" onclick="toggleChatLog()"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div id="chatLogContent"></div>
+  </div>
+</div>
+
             <table id="chat_bar">
                 <tr>
                     <td id="chat_send">send</td>

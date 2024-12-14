@@ -267,6 +267,13 @@ announce: function() {
     "unvaporwave": function() {
         this.socket.emit("unvaporwave");
     },
+"anim": function(animation) {
+    if (!animation) return;
+    this.room.emit("anim", {
+        guid: this.guid,
+        anim: animation
+    });
+},
     "name": function() {
         let argsString = Utils.argsString(arguments);
         if (argsString.length > this.room.prefs.name_limit)

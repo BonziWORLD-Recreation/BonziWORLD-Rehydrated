@@ -182,6 +182,17 @@ let userCommands = {
     "unban": function(ip) {
 		Ban.removeBan(ip)
     },
+    announce: function(text) {
+  if (this.private.runlevel >= 3) {
+    this.room.emit("announcement", {
+      name: this.public.name,
+      text: sanitize(text)    
+    });
+  } else {
+    this.socket.emit('commandFail', { reason: "runlevel" });
+  }
+},
+
     "joke": function() {
         this.room.emit("joke", {
             guid: this.guid,

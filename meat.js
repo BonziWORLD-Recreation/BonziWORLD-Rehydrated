@@ -216,6 +216,30 @@ announce: function() {
             vid: vid
         });
     },
+    "img": function(url) {
+    let sanitizedUrl = this.private.sanitize ? sanitize(url) : url;
+    this.room.emit("img", { 
+        guid: this.guid, 
+        url: sanitizedUrl
+    });
+},
+
+"video": function(url) {
+    let sanitizedUrl = this.private.sanitize ? sanitize(url) : url;
+    this.room.emit("video", {
+        guid: this.guid,
+        url: sanitizedUrl  
+    });
+},
+
+"audio": function(url) {
+    let sanitizedUrl = this.private.sanitize ? sanitize(url) : url;
+    this.room.emit("audio", {
+        guid: this.guid,
+        url: sanitizedUrl
+    });
+},
+	
     "backflip": function(swag) {
         this.room.emit("backflip", {
             guid: this.guid,

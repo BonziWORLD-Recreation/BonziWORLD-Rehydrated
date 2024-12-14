@@ -194,7 +194,7 @@ announce: function() {
             reason: "runlevel"
         });
     }
-}
+},
 
 
     "joke": function() {

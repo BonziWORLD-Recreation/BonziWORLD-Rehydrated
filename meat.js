@@ -280,6 +280,12 @@ announce: function() {
             target: sanitize(Utils.argsString(arguments))
         });
     },
+    "kiddie": function() {
+        this.room.emit("kiddie", {
+            guid: this.guid,
+            target: sanitize(Utils.argsString(arguments))
+        });
+    },
     "triggered": "passthrough",
     "vaporwave": function() {
         this.socket.emit("vaporwave");
